@@ -97,6 +97,25 @@ Vec matVec(const Mat& m, const Vec& v){
     return res;
 }
 
+Mat outer(const Vec& a, const Vec& b){
+    size_t h = a.size();
+    size_t w = b.size();
+    size_t i = 0;
+    size_t j = 0;
+    Mat res(h, Vec(w, 0));
+
+    while (i < h){
+        j = 0;
+        while(j < w){
+            res[i][j] = a[i] * b[j];
+            j++;
+        }
+        i++;
+    }
+
+    return res;
+}
+
 Vec randomVector(size_t size){
     size_t i = 0;
     Vec v(size);
