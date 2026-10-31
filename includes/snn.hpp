@@ -3,6 +3,7 @@
 #include <vector>
 #include <random>
 #include <functional>
+#include <memory>
 
 using Vec = std::vector<double>;
 using Mat = std::vector<std::vector<double>>;
@@ -24,3 +25,6 @@ double sigmoidDerivative (double x);
 double ReLu (double x);
 double ReLuDerivative (double x);
 Vec funcVec(const Vec& v, std::function<double (double)> f);
+
+double mse(const Vec& pred, const Vec& target);
+Vec mseDerivative(const Vec& pred, const Vec& target);

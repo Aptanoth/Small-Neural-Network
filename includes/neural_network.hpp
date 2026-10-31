@@ -1,6 +1,9 @@
-#include "snn.hpp"
+#pragma once
 
-class NN {
+#include "snn.hpp"
+#include "layers.hpp"
+
+class NeuralNetwork {
     std::vector<std::unique_ptr<Layer>> layers;
 
 public:
